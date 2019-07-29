@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Scope;
 public class Appconfig {
 
     @Bean
-    @Scope("prototype")
+//    @Scope("prototype")
     public Actor actor() {
         Actor actor = new Actor();
         return actor;
