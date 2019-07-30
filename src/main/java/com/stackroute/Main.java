@@ -2,8 +2,10 @@ package com.stackroute;
 
 import com.stackroute.domain.Actor;
 import com.stackroute.domain.Appconfig;
+import com.stackroute.domain.BeabLifeCycleDemoBean;
 import com.stackroute.domain.Movie;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.lang.reflect.Modifier;
@@ -22,6 +24,11 @@ public class Main {
         System.out.println(actor1);
         System.out.println(actor==actor1);
 
+
+        ConfigurableApplicationContext context1= new AnnotationConfigApplicationContext (BeabLifeCycleDemoBean.class);
+        BeabLifeCycleDemoBean beabLifeCycleDemoBean = context1.getBean("beabLifeCycleDemoBean", BeabLifeCycleDemoBean.class);
+         context1.close();
     }
+
 
 }

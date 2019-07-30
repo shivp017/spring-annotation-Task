@@ -28,4 +28,10 @@ public class Appconfig {
         return movie;
 
     }
+
+    @Bean(name="beabLifeCycleDemoBean")
+    public BeabLifeCycleDemoBean beabLifeCycleDemoBean() {
+        BeabLifeCycleDemoBean beabLifeCycleDemoBean= new BeabLifeCycleDemoBean();
+        return beabLifeCycleDemoBean;
+    }
 }
